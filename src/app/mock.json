@@ -1,0 +1,12 @@
+[  {
+  "name": "Martini",
+  "alcohol" : "Vodka"
+},
+  {
+    "name": "Moscow Mule",
+    "alcohol" : "Vodka"
+  },
+  {
+    "name": "White Claw",
+    "alcohol" : "Vodka"
+  }]

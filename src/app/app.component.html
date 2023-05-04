@@ -7,6 +7,31 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+// IMPORTS added by me
+import { Component } from '@angular/core';
+import cocktailData from './mock.json';
+
+// Class to iterate thru data
+<div class="container">
+
+  <table class="iterator">
+    <thead>
+      <th>Name</th>
+      <th>Alcohol</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let cocktail in cocktails">
+      <td>{{cocktail.name}}</td>
+      <td>{{cocktail.alcohol }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+// Display Data Only When It Is Available
+</div>
+<p *ngIf="cocktail === null"> end </p>
+</div>
+
 <style>
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -302,6 +327,8 @@
   }
 </style>
 
+
+
 <!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img
@@ -423,6 +450,23 @@
       <span>Build for Production</span>
     </button>
   </div>
+
+  // BUTTON THAT I ADDED
+  <button class="card card-small" (click)="selection.value = 'build'" tabindex="0">
+    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+    <span>Iterator</span>
+    <button (click)="click()">my button</button>
+  </button>
+</div>
+
+
+  <h1>{{ title }} ({{title.length}})</h1>
+  <input [(ngModel)]="title">
+  <h2 *ngIf="title.length>15"> the title is long!!!</h2>
+  <button (click)="click()">my button</button>
+
+  `
+  })
 
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
